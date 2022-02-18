@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+        <title>Back-Office</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+        <link rel="stylesheet" href="ticket.css">
+    </head>
+    <body>
+        <input type="checkbox" id="sidebar-toggle">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>
+                    <img src="logo.jpg" alt="logo Airdeve"
+                    width= "40"
+                    height="40">
+                </h3>
+                <label for="sidebar-toggle" class="ti-menu-alt"></label>
+            </div>
+
+            <div class="sidebar-menu">
+                <ul>
+                    <li><a href="../main/index.html">
+                            <span class="ti-home"></span>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li><a href="../events/event.html">
+                            <span class="ti-clipboard"></span>
+                            <span>Evénements</span>
+                        </a>
+                    </li>
+                    <li><a href="../user/user.html">
+                            <span class="ti-user"></span>
+                            <span>Utilisateurs</span>
+                        </a>
+                    </li>
+                    <li><a href="javascript:location.reload()">
+                            <span class="ti-ticket"></span>
+                            <span>Tickets</span>
+                        </a>
+                    </li>
+                    <li><a href="../events/error.html">
+                            <span class="ti-na"></span>
+                            <span>Erreurs</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+
+            <header>
+                <div class="search">
+                    <span class="ti-search"></span>
+                    <input type="search" id= "searchBar" placeholder="Search">
+                    <ul id="suggestions">
+                        
+                    </ul>
+                </div>
+            </header>
+
+            <main id = "main">
+                <div class="bloc" style="display:block">
+                <h2 class="dash-title" >Tickets</h2>
+
+                <div class="dash-cards" style="display:flex">
+                    <div class="card-single">
+                        <div class="card-body" >
+                            <span class="ti-briefcase"></span>
+                            <div id="nbTicket">
+                                <h5>Nombre de tickets total</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-single">
+                        <div class="card-body">
+                            <span class="ti-reload"></span>
+                            <div id="refundTickets">
+                                <h5>Nombre de tickets remboursés</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-single">
+                        <div class="card-body">
+                            <span class="ti-check-box"></span>
+                            <div id="nbTicketValid">
+                                <h5>Nombre de tickets validés</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+                <section id="eventList"></section>
+                <script type="module" src="index.js"></script>
+            </main>
+        </div>
+    </body>
+</html>
